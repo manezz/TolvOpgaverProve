@@ -1,0 +1,16 @@
+C:\Users\Magnu\iCloudDrive\C#\TolvOpgaverProve\bin\Debug\net5.0\TolvOpgaverProve.exe
+C:\Users\Magnu\iCloudDrive\C#\TolvOpgaverProve\bin\Debug\net5.0\TolvOpgaverProve.deps.json
+C:\Users\Magnu\iCloudDrive\C#\TolvOpgaverProve\bin\Debug\net5.0\TolvOpgaverProve.runtimeconfig.json
+C:\Users\Magnu\iCloudDrive\C#\TolvOpgaverProve\bin\Debug\net5.0\TolvOpgaverProve.runtimeconfig.dev.json
+C:\Users\Magnu\iCloudDrive\C#\TolvOpgaverProve\bin\Debug\net5.0\TolvOpgaverProve.dll
+C:\Users\Magnu\iCloudDrive\C#\TolvOpgaverProve\bin\Debug\net5.0\ref\TolvOpgaverProve.dll
+C:\Users\Magnu\iCloudDrive\C#\TolvOpgaverProve\bin\Debug\net5.0\TolvOpgaverProve.pdb
+C:\Users\Magnu\iCloudDrive\C#\TolvOpgaverProve\obj\Debug\net5.0\TolvOpgaverProve.csprojAssemblyReference.cache
+C:\Users\Magnu\iCloudDrive\C#\TolvOpgaverProve\obj\Debug\net5.0\TolvOpgaverProve.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Magnu\iCloudDrive\C#\TolvOpgaverProve\obj\Debug\net5.0\TolvOpgaverProve.AssemblyInfoInputs.cache
+C:\Users\Magnu\iCloudDrive\C#\TolvOpgaverProve\obj\Debug\net5.0\TolvOpgaverProve.AssemblyInfo.cs
+C:\Users\Magnu\iCloudDrive\C#\TolvOpgaverProve\obj\Debug\net5.0\TolvOpgaverProve.csproj.CoreCompileInputs.cache
+C:\Users\Magnu\iCloudDrive\C#\TolvOpgaverProve\obj\Debug\net5.0\TolvOpgaverProve.dll
+C:\Users\Magnu\iCloudDrive\C#\TolvOpgaverProve\obj\Debug\net5.0\ref\TolvOpgaverProve.dll
+C:\Users\Magnu\iCloudDrive\C#\TolvOpgaverProve\obj\Debug\net5.0\TolvOpgaverProve.pdb
+C:\Users\Magnu\iCloudDrive\C#\TolvOpgaverProve\obj\Debug\net5.0\TolvOpgaverProve.genruntimeconfig.cache
