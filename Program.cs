@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 
 namespace TolvOpgaverProve
@@ -209,6 +210,19 @@ namespace TolvOpgaverProve
 				Console.WriteLine($"{p} => False");
 			}
 		}
+		static void opgave_11(string p)
+		{
+			string[] stringArray = p.ToLower().Split(" ");
+			for (int i = 0; i < stringArray.Length-1; i++) {
+				char[] array = stringArray[i].ToCharArray();
+				char[] array2 = stringArray[i+1].ToCharArray();
+				if (array.Last().ToString() != array2.First().ToString()) {
+					Console.WriteLine($"{p} => False");
+					return;
+				}
+			}
+			Console.WriteLine($"{p} => True");
+		}
 		static void Main(string[] args)
 		{
 			while (true)
@@ -330,6 +344,14 @@ namespace TolvOpgaverProve
 						opgave_10("79215");
 						opgave_10("8134");
 						opgave_10("a561");
+						Console.ReadLine();
+						break;
+
+					case 11:
+						Console.Clear();
+						opgave_11("Marta appreciated deep perpendicular right trapezoids");
+						opgave_11("Mine evner rækker rimeligt tilfreds stillende");
+						opgave_11("Tellefonen ringer");
 						Console.ReadLine();
 						break;
 				}
