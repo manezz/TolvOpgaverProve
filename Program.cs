@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace TolvOpgaverProve
 {
@@ -172,12 +173,49 @@ namespace TolvOpgaverProve
 				Console.WriteLine($"{p} => False");
 			}
 		}
+		static void opgave_9(string p)
+		{
+			List<char> chars = new List<char>();
+			char[] array = p.ToLower().ToCharArray();
+			foreach (char c in array) {
+				if (chars.Contains(c)) {
+					Console.WriteLine($"{p} => False");
+					return;
+				}
+				else {
+					chars.Add(c);
+				}
+			}
+			Console.WriteLine($"{p} => True");
+		}
+		static void opgave_10(string p)
+		{
+			char[] array = p.ToCharArray();
+			string s = "";
+			int i = 0;
+			if (array.Length == 4) {
+				foreach (char c in array) {
+					s += c.ToString();
+				}
+				try {
+					i = Convert.ToInt32(s);
+					Console.WriteLine($"{p} => True");
+				}
+				catch (Exception) {
+					Console.WriteLine($"{p} => False");
+				}
+			}
+			else {
+				Console.WriteLine($"{p} => False");
+			}
+		}
 		static void Main(string[] args)
 		{
 			while (true)
 			{
 				string[] opgaver = {
-					"Måneder, korresponderende navn og tal",
+					"Maaneder",
+					"korresponderende navn og tal",
 					"Input fra bruger",
 					"Check fpr type",
 					"Alarm",
@@ -268,11 +306,30 @@ namespace TolvOpgaverProve
 						opgave_7("");
 						Console.ReadLine();
 						break;
+
 					case 8:
 						Console.Clear();
 						opgave_8(498167);
 						opgave_8(88888888);
 						opgave_8(77677);
+						Console.ReadLine();
+						break;
+					
+					case 9:
+						Console.Clear();
+						opgave_9("DingDong");
+						opgave_9("Algoritme");
+						opgave_9("PasSword");
+						opgave_9("Beslutte");
+						Console.ReadLine();
+						break;
+					
+					case 10:
+						Console.Clear();
+						opgave_10("4631");
+						opgave_10("79215");
+						opgave_10("8134");
+						opgave_10("a561");
 						Console.ReadLine();
 						break;
 				}
