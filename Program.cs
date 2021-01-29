@@ -48,7 +48,6 @@ namespace TolvOpgaverProve
 			Console.WriteLine($"{input} => {maaneder[input-1]}");
 			Console.ReadLine();
 		}
-		
 		static void opgave_2()
 		{
 			int[] tal = new int[5];
@@ -72,6 +71,7 @@ namespace TolvOpgaverProve
 							Console.WriteLine("Det er ikke et tal");
 							Console.ReadLine();
 						}
+						break;
 					}
 				}
 				break;
@@ -86,7 +86,7 @@ namespace TolvOpgaverProve
 			Console.WriteLine("Gennemsnitsvaerdi = {0:f2}", gennemsnit);
 			Console.ReadLine();
 		}
-		static void opgave_3(object a, object b)
+		static void opgave_3/*(SameType)*/(object a, object b)
 		{
 			bool bo;
 			if (a.GetType() == (b.GetType())) {
@@ -96,15 +96,80 @@ namespace TolvOpgaverProve
 				bo = false;
 			}
 			Console.WriteLine($"{a} & {b} => {bo}");
-			return;
 		}
-		static void opgave_4(string p)
+		static void opgave_4/*(Alarm)*/(string p)
 		{
 			if (p.ToLower().Contains("bombe")) {
 				Console.WriteLine($"{p} => Bombealarm - løb");
 			}
 			else {
 				Console.WriteLine($"{p} => Falsk alarm - slap af");
+			}
+		}
+		static void opgave_5(string p)
+		{
+			char[] array = p.ToCharArray();
+			string mid;
+			if (array.Length % 2 == 0) {
+				mid = Convert.ToString(array[array.Length/2-1]);
+				mid += Convert.ToString(array[array.Length/2]);
+			}
+			else {
+				mid = Convert.ToString(array[array.Length/2]);
+			}
+			Console.WriteLine($"{p} => {mid}");
+		}
+		static void opgave_6/*(Beregn)*/(string p)
+		{
+			char[] array = p.ToCharArray();
+			int b = Convert.ToInt32(array[0].ToString());
+			for (int i = 0;i < array.Length; i++) {
+				if (array[i].ToString() == "+") {
+					b += Convert.ToInt32(array[i+1].ToString());
+				}
+				else if (array[i].ToString() == "-") {
+					b -= Convert.ToInt32(array[i+1].ToString());
+				}
+				else if (array[i].ToString() == "*") {
+					b *= Convert.ToInt32(array[i+1].ToString());
+				}
+				else if (array[i].ToString() == "/") {
+					b /= Convert.ToInt32(array[i+1].ToString());
+				}
+			}
+			Console.WriteLine($"{p} => {b}");
+		}
+		static void opgave_7/*SkjulCifre*/(string p)
+		{
+			char[] array = p.ToCharArray();
+			string num = "";
+			if (array.Length > 4)
+			{
+				for (int i = 0; i < array.Length-4; i++) {
+					num += "#";
+				}
+				for (int i = array.Length-4; i < array.Length; i++) {
+					num += array[i].ToString();
+				}
+			}
+			else {
+				foreach (char c in array) {
+					num += c.ToString();
+				}
+			}
+			Console.WriteLine($"{p} => {num}");
+		}
+		static void opgave_8(int p)
+		{
+			char[] array = p.ToString().ToCharArray();
+			string mid = Convert.ToString(array[array.Length/2-1]);
+			Array.Reverse(array);
+			string mid2 = Convert.ToString(array[array.Length/2-1]);
+			if (mid == mid2) {
+				Console.WriteLine($"{p} => True");
+			}
+			else {
+				Console.WriteLine($"{p} => False");
 			}
 		}
 		static void Main(string[] args)
@@ -175,6 +240,39 @@ namespace TolvOpgaverProve
 						opgave_4("Der er en bombe");
 						opgave_4("Tror du virkelig der er en bombe?");
 						opgave_4("Pas paa, den springer i luftem");
+						Console.ReadLine();
+						break;
+					
+					case 5:
+						Console.Clear();
+						opgave_5("test");
+						opgave_5("teste");
+						opgave_5("midten");
+						opgave_5("A");
+						Console.ReadLine();
+						break;
+
+					case 6:
+						Console.Clear();
+						opgave_6("2+7+1+4");
+						opgave_6("6/3+7+8");
+						opgave_6("3*9-5-7");
+						Console.ReadLine();
+						break;
+
+					case 7:
+						Console.Clear();
+						opgave_7("23421124531696");
+						opgave_7("424215211696");
+						opgave_7("352");
+						opgave_7("");
+						Console.ReadLine();
+						break;
+					case 8:
+						Console.Clear();
+						opgave_8(498167);
+						opgave_8(88888888);
+						opgave_8(77677);
 						Console.ReadLine();
 						break;
 				}
