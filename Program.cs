@@ -223,6 +223,51 @@ namespace TolvOpgaverProve
 			}
 			Console.WriteLine($"{p} => True");
 		}
+		static void opgave_12()
+		{
+			List<string> num = new List<string>();
+			int number = 0;
+			int number2 = 0;
+			int conv = 1;
+			void GetNumberFromUser()
+			{
+				Console.WriteLine("Skriv et heltal mellem 0 og 255");
+            	number = Convert.ToInt32(Console.ReadLine());
+            	number2 = number;
+			}
+			void ConvertIntReturnBinaryString()
+			{
+				while (number >= conv)
+            	{
+                	number -= conv;
+                	conv += conv;
+            	}
+            	while (conv != 0)
+            	{
+                	if (number2 - conv >= 0)
+                	{
+                    	num.Add("1");
+                    	number2 -= conv;
+                    	if (conv == 1) { conv -= 1; }
+                    	else { conv /= 2; }
+             		}
+                	else
+                	{
+                    	num.Add("0");
+                    	if (conv == 1) { conv -= 1; }
+                    	else { conv /= 2; }
+                	}
+            	}
+			}
+			void ShowResult()
+			{
+				num.ForEach(i => Console.Write(i));
+			}
+
+			GetNumberFromUser();
+			ConvertIntReturnBinaryString();
+			ShowResult();
+		}
 		static void Main(string[] args)
 		{
 			while (true)
@@ -354,6 +399,12 @@ namespace TolvOpgaverProve
 						opgave_11("Tellefonen ringer");
 						Console.ReadLine();
 						break;
+
+					case 12:
+						Console.Clear();
+						opgave_12();
+						Console.ReadLine();
+						break;		
 				}
 			}
 		}
